@@ -1,5 +1,8 @@
 import React from "react";
-import doctorImg from "../assets/doctor.png"; // update path if needed
+import doctorImg from "../assets/doctor.png"; // update path if n
+import typingImg from "../assets/typing.png";
+import voiceImg from "../assets/voice.png";
+import imageImg from "../assets/image-input.png";
 
 const Home = () => {
   return (
@@ -32,11 +35,26 @@ const Home = () => {
           <b>voice</b> — our smart AI instantly connects you with the best
           available doctor for your needs.
         </p>
-
-        {/* Button */}
-        <button className="mt-4 px-10 py-4 bg-[#cbd722] text-[#4B2FE3] font-bold rounded-2xl text-lg shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform duration-300">
-          FAQ’S
-        </button>
+        <div className="flex justify-center items-center space-x-20">
+          <a href="http://localhost:8501/" target="_blank">
+          <div className="flex flex-col justify-center items-center border border-black bg-[#96a942] w-50 h-40">
+            <p>Text the bot -</p>
+            <img src={typingImg} alt="text icon" className="w-full h-full object-cover"/>
+          </div>
+          </a>
+          <a href="http://localhost:8501/" target="_blank">
+          <div className="flex flex-col justify-center items-center border border-black bg-[#96a942] w-50 h-40">
+            <p>Drop a voice message</p>
+            <img src={voiceImg} alt="text icon" className="w-full h-full object-cover"/>
+          </div>
+          </a>
+          <a href="http://localhost:8501/" target="_blank">
+          <div className="flex flex-col justify-center items-center border border-black bg-[#96a942] w-50 h-40">
+            <p>Upload an image</p>
+            <img src={imageImg} alt="text icon" className="w-full h-full object-cover overflow-hidden"/>
+          </div>
+          </a>
+        </div>
       </div>
     </div>
   );
